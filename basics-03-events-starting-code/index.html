@@ -25,7 +25,8 @@
      <!-- without 2 way binding <input type="text" v-bind:value="name" v-on:input="setName" v-on:keyup.enter="confirmInput">--> 
      <!-- with 2 way binding --> 
      <input type="text" v-model="name"  v-on:keyup.enter="confirmInput">
-  
+     <input type="text" v-model="lastName" >
+
       <button v-on:click="resetInput">Reset Input</button>
       <p>Your Name: {{fullname}}</p>
       <form v-on:submit="submitForm">

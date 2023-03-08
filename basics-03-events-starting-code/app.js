@@ -3,16 +3,44 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name:'',
-      confirmedName:''
+      confirmedName:'',
+      //fullname:'',
+      lastName:''
     };
+  },
+  watch:{
+
+    counter(value){
+      if(value>50){
+        const that = this;
+        setTimeout(function(){
+          that.counter = 0;
+        },5000);
+      }
+    }
+    
+    // name(value){
+    //   if(value===''){
+    //     this.fullname='';
+    //   }else{
+    //     this.fullname = value + ' '+ this.lastName;
+    //   } 
+    // },
+    // lastName(value){
+    //   if(value===''){
+    //     this.fullname='';
+    //   }else{
+    //     this.fullname = this.name + ' '+ value;
+    //   } 
+    // }
   },
   computed:{
     fullname(){
       console.log('Running again..');
-      if(this.name === ''){
+      if(this.name === ''||this.lastName===''){
         return '';
       }
-      return this.name + ' ' + 'Senarathna';
+      return this.name + ' ' + this.lastName;
     }
   },
   methods: {
