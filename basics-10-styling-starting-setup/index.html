@@ -20,7 +20,7 @@
       <div class="demo" :style="{borderColor: boxASelected ? 'red' : '#ccc'}" @click="boxSelected('A')"></div>
       <div :class="boxBSelected ? 'demo active' : 'demo'" @click="boxSelected('B')" ></div>
       <!--same as above line, but less code and easy-->
-      <div class="demo" :class="{active: boxCSelected}" @click="boxSelected('C')"></div>
+      <div class="demo" :class="boxAclasses" @click="boxSelected('C')"></div>
     </section>
   </body>
 </html>
