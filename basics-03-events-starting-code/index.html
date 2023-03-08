@@ -27,7 +27,7 @@
      <input type="text" v-model="name"  v-on:keyup.enter="confirmInput">
   
       <button v-on:click="resetInput">Reset Input</button>
-      <p>Your Name: {{outputFullName()}}</p>
+      <p>Your Name: {{fullname}}</p>
       <form v-on:submit="submitForm">
         <input type="text">
         <button>Sign Up</button>
