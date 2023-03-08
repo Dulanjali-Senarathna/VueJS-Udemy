@@ -3,11 +3,12 @@ const app = Vue.createApp({
         return{
             boxASelected:false,
             boxBSelected:false,
-            boxCSelected:false
+            boxCSelected:false,
+            boxDSelected:false
         }
     },
     computed:{
-        boxAclasses(){
+        boxCclasses(){
            return {active: this.boxCSelected} 
         }
     },
@@ -21,6 +22,9 @@ const app = Vue.createApp({
             }
             else if (box ==='C'){
                 this.boxCSelected=!this.boxCSelected;
+            }
+            else if (box ==='D'){
+                this.boxDSelected=!this.boxDSelected;
             }
 
         }
