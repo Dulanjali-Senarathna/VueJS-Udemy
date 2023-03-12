@@ -1,8 +1,8 @@
 <template>
   <header><h1>My Friends</h1></header>
   <ul>
-    <friend-contact name="Manuel Lorenz" phone-number="0713724587" email-address="dula@gmail.com" is-favourite='1'></friend-contact>
-    <friend-contact name="Dulanjali Senarathna" phone-number="0713724583" email-address="dula93@gmail.com" is-favourite='0'></friend-contact>
+    <friend-contact name="Manuel Lorenz" phone-number="0713724587" email-address="dula@gmail.com" is-favourite='5'></friend-contact>
+    <friend-contact name="Dulanjali Senarathna" phone-number="0713724583" email-address="dula93@gmail.com"></friend-contact>
   </ul>
 </template>
 
