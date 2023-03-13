@@ -1,16 +1,22 @@
+
 <template>
+<section>
   <header><h1>My Friends</h1></header>
   <ul>
     <friend-contact 
     v-for="friend in friends"
     :key="friend.id"
+    :id="friend.id"
     :name="friend.name" 
     :phone-number="friend.phone" 
-    email-address="friend.email" 
-    :is-favourite='true'>
+    :email-address="friend.email" 
+    :is-favourite="friend.isFavourite"
+    @toggle-favourite="toggleFavouriteStatus"
+    >
   </friend-contact>
    
   </ul>
+</section>
 </template>
 
 <script>
@@ -23,18 +29,25 @@
                 name: 'Manuel Lorenz',
                 phone:'0713724587',
                 email:'dula@gmail.com',
-                
+                isFavourite:true
                },
                {
                 id:'dula',
                 name: 'Dulanjali Senarathna',
                 phone:'0713724583',
-                email:'dula93@gmail.com'
+                email:'dula93@gmail.com',
+                isFavourite:false
                }
             ]
         }
     },
-  }
+    methods:{
+      toggleFavouriteStatus(friendId){
+       const identifiedFriend = this.friends.find(friend => friend.id === friendId);
+       identifiedFriend.isFavourite = !identifiedFriend.isFavourite
+      }
+    }
+  };
 </script>
 
 <style>
