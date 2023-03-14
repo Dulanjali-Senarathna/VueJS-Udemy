@@ -8,6 +8,7 @@
             <li><strong>Phone:</strong>{{phoneNumber}}</li>
             <li><strong>Email:</strong>{{emailAddress}}</li>
         </ul>
+        <button @click="$emit('delete',id)">Delete</button>
     </li>
 </template>
 
@@ -47,7 +48,8 @@ export default {
     },
 
      emits:[
-         'toggle-favourite'
+         'toggle-favourite',
+         'delete'
     ],
 
     // emits:{
@@ -72,7 +74,8 @@ export default {
         },
         toggleFavourite(){
            this.$emit('toggle-favourite',this.id);
-        }
+        },
+        
     }
 }
 </script>
